@@ -1,0 +1,141 @@
+.tbl-generator-green {
+	margin:0px;padding:0px;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px solid #5656ff;
+	background-color:#ffffff;				
+}.tbl-generator-green  table{ 
+	background-color:green;
+	color:white;			
+}.tbl-generator-green  tr:first-child th{ 
+	background-color:green;
+	color:white;			
+}.tbl-generator-green  tr:nth-child(odd){ 
+	background-color:#d4ffaa;
+}.tbl-generator-green  tr:nth-child(even)    {
+	background-color:#99ff66;
+}.tbl-generator-green  tr:hover td{
+	background-color:green;
+	color:white;
+}
+
+.tbl-generator-blue {
+	margin:0px;padding:0px;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px solid #5656ff;
+	background-color:#ffffff;				
+}.tbl-generator-blue  table{ 
+	background-color:blue;
+	color:white;			
+}.tbl-generator-blue  tr:first-child th{ 
+	background-color:blue;
+	color:white;			
+}.tbl-generator-blue  tr:nth-child(odd){ 
+	background-color:#66ccff;
+}.tbl-generator-blue  tr:nth-child(even)    {
+	background-color:#3399ff;
+}.tbl-generator-blue  tr:hover td{
+	background-color:blue;
+	color:white;
+}		
+
+.tbl-generator-yellow {
+	margin:0px;padding:0px;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px solid #5656ff;
+	background-color:#ffffff;				
+}.tbl-generator-yellow  table{ 
+	background-color:yellow;
+	color:black;			
+}.tbl-generator-yellow  tr:first-child th{ 
+	background-color:yellow;
+	color:black;			
+}.tbl-generator-yellow  tr:nth-child(odd){ 
+	background-color:#ffff66;
+}.tbl-generator-yellow  tr:nth-child(even)    {
+	background-color:#ffff99;
+}.tbl-generator-yellow  tr:hover td{
+	background-color:yellow;
+	color:red;
+}		
+
+.tbl-generator-red {
+	margin:0px;padding:0px;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px solid #5656ff;
+	background-color:#ffffff;				
+}.tbl-generator-red  table{ 
+	background-color:red;
+	color:black;			
+}.tbl-generator-red  tr:first-child th{ 
+	background-color:red;
+	color:black;			
+}.tbl-generator-red  tr:nth-child(odd){ 
+	background-color:#ff3300;
+}.tbl-generator-red  tr:nth-child(even)    {
+	background-color:#ff6666;
+}.tbl-generator-red  tr:hover td{
+	background-color:red;
+	color:white;
+}
+			
+.pagination {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin-top: 10px;
+}
+.pagination li {
+  display: inline;
+  text-align: center;
+}
+.pagination a {
+  float: left;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 5px 12px;
+  color: #fff;
+  margin-left: -1px;
+  border: 1px solid transparent;
+  line-height: 1.5;
+}
+.pagination a.active {
+  cursor: default;
+}
+.pagination a:active {
+  outline: none;
+}
+.pagination .currentpage a {
+	background-color: green;
+	color: #fff;
+}
+
+.modal-2 li:first-child a {
+  border-radius: 50px 0 0 50px;
+  border-color: black;
+  background: #d4ffaa;
+  color: black;
+  box-shadow: 10px 10px 5px #888888;
+}
+.modal-2 li:last-child a {
+  border-radius: 0 50px 50px 0;
+  border-color: black;
+  background: #d4ffaa;
+  color: black;
+  box-shadow: 10px 10px 5px #888888;
+}
+.modal-2 a {
+  border-color: black;
+  color: black;
+  background: #d4ffaa;
+  box-shadow: 10px 10px 5px #888888;
+}
+.modal-2 a:hover {
+  color: white;
+  background-color: green;
+}
+.modal-2 a.active, .modal-2 a:active {
+  border-color: black;
+  background-color: green;
+  color: black;
+}
