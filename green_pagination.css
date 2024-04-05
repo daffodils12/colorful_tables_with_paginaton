@@ -124,6 +124,14 @@
   color: black;
   box-shadow: 10px 10px 5px #888888;
 }
+.modal-2 li:first-child a:hover {
+  color: white;
+  background-color: green;
+}
+.modal-2 li:last-child a:hover {
+  color: white;
+  background-color: green;	
+}
 .modal-2 a {
   border-color: black;
   color: black;
