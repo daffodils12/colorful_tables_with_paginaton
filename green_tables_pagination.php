@@ -67,17 +67,17 @@ if ($stmt = $mysqli->prepare('SELECT * FROM worldcup_standings ORDER BY id LIMIT
 			?>
 			<ul class="pagination modal-2">	  
 				<?php if ($page == 0) { $page=1; }
-					  elseif ($page < 20 and $page >= 11) { $total_pages = 10; $prev_set = 1; }
-					  elseif ($page < 30 and $page >= 21) { $total_pages = 20; $prev_set = 11; }
-					  elseif ($page < 40 and $page >= 31) { $total_pages = 30; $prev_set = 21; }
-					  elseif ($page < 50 and $page >= 41) { $total_pages = 40; $prev_set = 31; }	
-					  elseif ($page < 60 and $page >= 51) { $total_pages = 50; $prev_set = 41; }
-					  elseif ($page < 70 and $page >= 61) { $total_pages = 60; $prev_set = 51; }
-					  elseif ($page < 80 and $page >= 71) { $total_pages = 70; $prev_set = 61; }
-					  elseif ($page < 90 and $page >= 81) { $total_pages = 80; $prev_set = 71; }
-					  elseif ($page < 100 and $page >= 91) { $total_pages = 90; $prev_set = 81; }						  
+					  elseif ($page <= 20 and $page >= 11) { $total_pages = 10; $prev_set = 1; }
+					  elseif ($page <= 30 and $page >= 21) { $total_pages = 20; $prev_set = 11; }
+					  elseif ($page <= 40 and $page >= 31) { $total_pages = 30; $prev_set = 21; }
+					  elseif ($page <= 50 and $page >= 41) { $total_pages = 40; $prev_set = 31; }	
+					  elseif ($page <= 60 and $page >= 51) { $total_pages = 50; $prev_set = 41; }
+					  elseif ($page <= 70 and $page >= 61) { $total_pages = 60; $prev_set = 51; }
+					  elseif ($page <= 80 and $page >= 71) { $total_pages = 70; $prev_set = 61; }
+					  elseif ($page <= 90 and $page >= 81) { $total_pages = 80; $prev_set = 71; }
+					  elseif ($page <= 100 and $page >= 91) { $total_pages = 90; $prev_set = 81; }						  
 				?>
-				<li class="page" title="Prev Set"><a href="green_tables_pagination.php?page=<?php echo $prev_set ?>"><?php echo "Prev Set" ?></a></li>
+				<li class="modal-2" title="Prev Set"><a href="green_tables_pagination.php?page=<?php echo $prev_set ?>"><?php echo "Prev Set" ?></a></li>
 				<?php if ($page == 0) { $page=1; }
 					  elseif ($page >  0 and $page < 11) { $total_pages = 10; $page =  1; }
 					  elseif ($page > 10 and $page < 21) { $total_pages = 20; $page = 11; }
@@ -93,24 +93,35 @@ if ($stmt = $mysqli->prepare('SELECT * FROM worldcup_standings ORDER BY id LIMIT
 					if ($page <= $max_tot_pages) { 
 						if ($clicked_page != $page) { ?>
 							<li class="page"><a href="green_tables_pagination.php?page=<?php echo $page ?>"><?php echo $page ?></a></li>			  				
-				<?php	} elseif ($clicked_page == $page) { ?>
-							<li class="active"><a href="green_tables_pagination.php?page=<?php echo $page ?>"><?php echo $page ?></a></li>
+				<?php	} 
+						elseif ($clicked_page == $page) { ?>
+							<li class="page"><a class="active" href="green_tables_pagination.php?page=<?php echo $page ?>"><?php echo $page ?></a></li>
 				<?php	}
 					}				 					
 				if ($page < $total_pages) {
 					$page=$page+1;						
-				} 	
-				endwhile; 
-				if ($page <= $max_tot_pages) {?>
-					<li class="page"><a href="green_tables_pagination.php?page=<?php echo $page ?>"><?php echo $page ?></a></li>
+				} 						
+				endwhile;
 				
-				<?php $page=$page+1; ?>
-					<li class="page" title="Next Set"><a href="green_tables_pagination.php?page=<?php echo $page ?>"><?php echo "Next Set" ?></a></li>
+				/*echo "page :" . $page;
+				echo "clicked_page :" . $clicked_page;
+				echo "max_tot_pages :" . $max_tot_pages;*/
+				if ($page <= $max_tot_pages) {
+				  if ($clicked_page == $page) { ?> 
+					<li class="page"><a class="active" href="green_tables_pagination.php?page=<?php echo $page ?>"><?php echo $page ?></a></li>
+				  <?php } 
+				  elseif ($clicked_page <= $max_tot_pages) {  ?> 
+					<li class="page"><a href="green_tables_pagination.php?page=<?php echo $page ?>"><?php echo $page ?></a></li>
+				  <?php }					 				 
+				}
+				if ($clicked_page == $max_tot_pages and $page <= $clicked_page) { ?> 
+					<li class="page"><a class="active" href="green_tables_pagination.php?page=<?php echo $page ?>"><?php echo $page ?></a></li>
+				<?php } 
+				if ($page <= $max_tot_pages) { $page=$page+1; ?>
+					<li class="modal-2" title="Next Set"><a href="green_tables_pagination.php?page=<?php echo $page ?>"><?php echo "Next Set" ?></a></li>					
 				<?php } ?>
-			</ul>	
-			<?php } 
-			?>			
-			
+			</ul>
+			<?php } ?>
 		</div>
 </BODY>
 </HTML> 
