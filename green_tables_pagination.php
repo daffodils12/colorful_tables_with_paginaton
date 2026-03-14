@@ -49,12 +49,12 @@ if ($stmt = $mysqli->prepare('SELECT * FROM worldcup_standings ORDER BY id LIMIT
 			  <?php while ($row = $result->fetch_assoc()): ?>
 			  <tr>			  
 				<td><?php echo $row['id']; ?></td>
-				<td><?php echo $row['name']; ?></td>
-				<td><?php echo $row['played']; ?></td>
-				<td><?php echo $row['wins']; ?></td>
-				<td><?php echo $row['loss']; ?></td>
-				<td><?php echo $row['draws']; ?></td>
-				<td><?php echo $row['points']; ?></td>		
+				<td><?php echo $row['Country']; ?></td>
+				<td><?php echo $row['Played']; ?></td>
+				<td><?php echo $row['Wins']; ?></td>
+				<td><?php echo $row['Loss']; ?></td>
+				<td><?php echo $row['Draws']; ?></td>
+				<td><?php echo $row['Points']; ?></td>		
 			  </tr>
 			  <?php endwhile; ?>		  
 			</table>
