@@ -1,0 +1,137 @@
+<html>
+<head>
+
+	Stock Transactions
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#myDIV {
+  width: 35%;
+}
+</style>
+<link rel="stylesheet" href="orange.css" />
+</head><br><br>
+
+<body>
+<div class="example example-1">
+<table width="35%">
+	<tr>
+		<th><button type="button" id="myButton" onclick="toggleAllRows()">+</button></th>
+		<th>Trans Date</th>
+		<th>Symbol</th>
+		<th>Qty</th>
+		<th>Buy Price</th>
+		<th>Curr Price</th>
+	</tr>		
+	<tr>
+		<td><button type="button" id="myButton1" onclick="toggleRows(1)">+</button></td>
+		<td></td>
+		<td>AMEX</td>
+		<td>10</td>
+		<td>290</td>
+		<td>320</td>
+	</tr>		
+
+	<tr  name="myRow1" style="display: none;"><td></td><td>03-jan-2026</td><td>AMEX</td><td>3</td><td>285</td><td>320</td></tr>
+	<tr  name="myRow1" style="display: none;"><td></td><td>05-feb-2026</td><td>AMEX</td><td>3</td><td>289</td><td>320</td></tr>	
+	<tr  name="myRow1" style="display: none;"><td></td><td>08-mar-2026</td><td>AMEX</td><td>4</td><td>295</td><td>320</td></tr>	
+
+	<tr>
+		<td><button type="button" id="myButton2" onclick="toggleRows(2)">+</button></td>
+		<td></td>
+		<td>GOOG</td>
+		<td>5</td>
+		<td>130</td>
+		<td>145</td>
+	</tr>	
+	
+	<tr  name="myRow2" style="display: none;"><td></td><td>04-jan-2026</td><td>GOOG</td><td>3</td><td>285</td><td>320</td></tr>
+	<tr  name="myRow2" style="display: none;"><td></td><td>06-feb-2026</td><td>GOOG</td><td>2</td><td>289</td><td>320</td></tr>		
+	
+	<tr>
+		<td><button type="button" id="myButton3"  onclick="toggleRows(3)">+</button></td>
+		<td></td>
+		<td>AMZN</td>
+		<td>8</td>
+		<td>120</td>
+		<td>220</td>
+	</tr>
+	
+	<tr  name="myRow3" style="display: none;"><td></td><td>05-jan-2026</td><td>AMZN</td><td>1</td><td>285</td><td>320</td></tr>
+	<tr  name="myRow3" style="display: none;"><td></td><td>06-feb-2026</td><td>AMZN</td><td>3</td><td>289</td><td>320</td></tr>	
+	<tr  name="myRow3" style="display: none;"><td></td><td>07-mar-2026</td><td>AMZN</td><td>4</td><td>295</td><td>320</td></tr>
+	
+	<tr>
+		<td><button type="button" id="myButton4" onclick="toggleRows(4)">+</button></td>
+		<td></td>
+		<td>PAY</td>
+		<td>15</td>
+		<td>55</td>
+		<td>62</td>
+	</tr>		
+	
+	<tr  name="myRow4" style="display: none;"><td></td><td>05-jan-2026</td><td>PAY</td><td>5</td><td>285</td><td>320</td></tr>
+	<tr  name="myRow4" style="display: none;"><td></td><td>06-feb-2026</td><td>PAY</td><td>6</td><td>289</td><td>320</td></tr>	
+	<tr  name="myRow4" style="display: none;"><td></td><td>07-mar-2026</td><td>PAY</td><td>4</td><td>295</td><td>320</td></tr>	
+</table>
+	
+<script>
+  function toggleRows(j) {
+	//alert("inside toggleRows "+j);
+	
+	//alert("inside myButton "+"myButton"+j);
+    // Get the button element by its ID
+    const button = document.getElementById("myButton"+j);
+    
+    // Check the current color, text and switch it
+    if (button.textContent === "+") {
+      button.textContent = "-";
+	  button.style.backgroundColor = 'white'; // Change background color
+	  button.style.color = 'darkorange'; // Change text color		    
+    } else {
+      button.textContent = "+";	  
+	  button.style.backgroundColor = 'darkorange'; // Change background color
+	  button.style.color = 'white'; // Change text color		  
+    }	
+		
+	rowsName="myRow"+j;
+	//alert("inside toggleRows :"+'tr[name='+rowsName+']');
+	// Selects all <tr> elements with the name attribute trRowsName
+	let rowsByName = document.querySelectorAll('tr[name='+rowsName+']');
+
+	// You can then iterate over the resulting NodeList
+	rowsByName.forEach(row => {
+		if (row.style.display === "none") {
+		  row.style.display = "table-row"; // Resets to the correct table row display value
+		} else {
+		  row.style.display = "none";
+		}	
+	});	
+	  }
+	  
+  function toggleAllRows() {
+		//alert("inside toggleAllRows ");
+	//alert("inside myButton "+"myButton"+j);
+    // Get the button element by its ID
+    const button = document.getElementById("myButton");	
+    
+    // Check the current color, text and switch it
+    if (button.textContent === "+") {
+      button.textContent = "-";
+	  button.style.backgroundColor = 'white'; // Change background color
+	  button.style.color = 'darkorange'; // Change text color		    
+    } else {
+      button.textContent = "+";	  
+	  button.style.backgroundColor = 'darkorange'; // Change background color
+	  button.style.color = 'white'; // Change text color		  
+    }		
+		
+		
+		for (let i = 1; i < 5; i++) {
+		  toggleRows(i);
+		}	
+    }	
+</script>
+
+</body>
+</html>
