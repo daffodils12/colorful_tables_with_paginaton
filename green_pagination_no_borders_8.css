@@ -1,0 +1,160 @@
+.tbl-generator-green {
+	margin:0px;padding:0px;
+	box-shadow: 10px 10px 5px #888888;
+	border:none;
+	
+	background-color:#ffffff;
+    margin-left: auto;		/* start move table to center of the page */						
+    margin-right: auto;
+    width: 40%; 			/* end move table to center of the page */
+	font-family: Arial;
+	font-size: 14px;																			  
+}.tbl-generator-green  table{ 
+	background-color:MediumSeaGreen;
+	color:white;			
+}.tbl-generator-green  td {
+  text-align: center;
+}.tbl-generator-green  tr:first-child th{ 
+	background-color:MediumSeaGreen;
+	color:white;			
+}.tbl-generator-green  tr:nth-child(odd){ 
+	background-color:#d4ffaa;
+}.tbl-generator-green  tr:nth-child(even)    {
+	background-color:#00cc44;
+	color:white;
+}.tbl-generator-green  tr:hover td{
+	background-color:MediumSeaGreen;
+	color:white;					
+}
+
+table {
+  /* Set the table width and force fixed layout */
+  width: 60%; 
+  /*table-layout: fixed; */
+  border-collapse: collapse;
+}
+
+th {
+  border:none;
+  text-align: center;
+  /* Handle overflow */
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis; /* Adds "..." for overflowing text */
+  height: 35px;
+}
+
+td {
+  border:none;
+  text-align: center;
+  /* Handle overflow */
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis; /* Adds "..." for overflowing text */
+}
+
+/* Set specific widths for each column */
+.column1 { width: 75px; }
+.column2 { width: 40%; }
+.column3 { width: 50px; }	
+.column4 { width: 75px; }
+.column5 { width: 75px; }
+.column6 { width: 75px; }
+.column7 { width: 75px; }
+/* Pagination buttons starts here */			
+.pagination {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin-top: 10px;
+  display: flex; /* Enables flexbox layout */
+  margin: auto;
+  justify-content: center; /* Centers child elements horizontally change left,center,right */											 																			 
+}
+.pagination li {
+  display: inline;
+  text-align: center;
+}
+.pagination a {
+  float: left;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 5px 12px;
+  color: #fff;
+  margin-left: -1px;
+  border: 1px solid transparent;
+  line-height: 1.5;
+}
+.pagination a.active {
+  cursor: default;
+}
+.pagination a:active {
+  outline: none;
+}
+.pagination .currentpage a {
+	background-color: MediumSeaGreen;
+	color: #fff;
+}
+.pagination .center-list {
+  text-align: center; /* Centers the list items within the UL */
+  list-style-type: none; /* Optional: removes default bullet points */
+  padding: 0; /* Optional: removes default padding */
+}
+.pagination .center-list li{
+  display: inline-block; /* Makes list items flow horizontally */
+  margin: 0 10px; /* Optional: adds spacing between items */
+}
+/* prev set */
+.modal-2 li:first-child a {
+  border-radius: 50px 0 0 50px;
+  border-color: #00cc44;					   
+  background-color: #00cc44;
+  color: white;
+  font-weight:bold;						
+  box-shadow: 10px 10px 5px #888888;
+}
+/* next set */
+.modal-2 li:last-child a {
+  border-radius: 0 50px 50px 0;
+  border-color: #00cc44;
+  background-color:  #00cc44;							 
+  color: white;
+  font-weight:bold;							
+  box-shadow: 10px 10px 5px #888888;
+}
+/* prev set hover color*/
+.modal-2 li:first-child a:hover {
+  color: black;
+  border-color:#0000ff;								 
+  background-color:#d4ffaa;
+}
+/* next set hover color*/
+.modal-2 li:last-child a:hover {
+  color: black;
+  border-color:#d4ffaa; 								
+  background-color:#d4ffaa;
+}
+/* All page links color */
+.modal-2 a {
+  border-color:#00cc44;
+  color:white;
+  font-weight:bold;
+  background-color: #00cc44;									
+  box-shadow:10px 10px 5px #888888;
+}
+/* current page hover color */
+.modal-2 a:hover {
+  color: black;
+  border-color:#d4ffaa;			  
+  background-color:#d4ffaa;
+}
+/* current page links color active */
+.modal-2 a.active, .modal-2 a:active {
+  border-color: #d4ffaa;
+  background-color:#d4ffaa; 								  
+  color: black;
+  font-weight:bold;							
+}
+/* Pagination buttons ends here */
+
